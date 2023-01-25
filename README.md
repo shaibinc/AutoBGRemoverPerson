@@ -27,10 +27,10 @@ Usage
 To use the library, simply create an instance of the BackgroundRemover class and call the removeBackground method, passing in the image or video frame you want to process. You will also need to pass in the context of your app and your API key.
 
 Copy code
-
-`new BgRemover().bitmapSegmentation(context,
-            bitmap,
-            new BgRemoverListener() {
+```
+new BgRemover().bitmapSegmentation(context,
+            bitmap,new BgRemoverListener() {
+            
                 @Override
                 public void onSuccess(Bitmap bitmap) {
                     // Handle successful bitmap segmentation here
@@ -40,7 +40,8 @@ Copy code
                 public void onFailed(Exception exception) {
                     Toast.makeText(context, "Error Occurred", Toast.LENGTH_SHORT).show();
                 }
-            });`
+            });
+```
 
 
 We hope you enjoy using this library and we look forward to your feedback!
