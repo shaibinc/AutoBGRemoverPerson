@@ -18,8 +18,8 @@ public class SmoothMask {
 
     public static Bitmap blur(Context context, Bitmap source) {
         int radius = 10;
-        int width = source.getWidth() ;
-        int height = source.getHeight() ;
+        int width = source.getWidth();
+        int height = source.getHeight();
 
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
 
@@ -27,12 +27,12 @@ public class SmoothMask {
         Paint paint = new Paint();
         paint.setFlags(Paint.FILTER_BITMAP_FLAG | Paint.ANTI_ALIAS_FLAG);
         PorterDuffColorFilter filter =
-                new PorterDuffColorFilter( Color.TRANSPARENT, PorterDuff.Mode.SRC_ATOP);
+                new PorterDuffColorFilter(Color.TRANSPARENT, PorterDuff.Mode.SRC_ATOP);
         paint.setColorFilter(filter);
         canvas.drawBitmap(source, 0, 0, paint);
 
         try {
-            bitmap = renderScript(context, bitmap,radius);
+            bitmap = renderScript(context, bitmap, radius);
         } catch (RSRuntimeException e) {
             bitmap = stack(bitmap, radius, true);
         }
@@ -297,6 +297,7 @@ public class SmoothMask {
 
         return (bitmap);
     }
+
     public static Bitmap tfResizeBilinear(Bitmap bitmap, int w, int h) {
         if (bitmap == null) {
             return null;
