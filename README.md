@@ -17,6 +17,7 @@ Installation
 To use this library, you can include it in your app by adding the following to your app's build.gradle file:
 
 Copy code
+//
 dependencies {
       implementation 'com.github.shaibinc:AutoBGRemoverPerson:1.0'
 }
@@ -26,6 +27,7 @@ Usage
 To use the library, simply create an instance of the BackgroundRemover class and call the removeBackground method, passing in the image or video frame you want to process. You will also need to pass in the context of your app and your API key.
 
 Copy code
+//
 new BgRemover().bitmapSegmentation(context,
             bitmap,
             new BgRemoverListener() {
