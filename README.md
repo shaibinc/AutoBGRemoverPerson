@@ -14,9 +14,17 @@ We have thoroughly tested the library and have included detailed documentation t
 
 Installation
 
-To use this library, you can include it in your app by adding the following to your app's build.gradle file:
+To use this library, you can include it in your app by adding the following file:
 
-Copy code
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ Add the dependency on build.gradle
 
 `dependencies {
       implementation 'com.github.shaibinc:AutoBGRemoverPerson:1.0'
