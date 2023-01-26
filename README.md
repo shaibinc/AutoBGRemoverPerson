@@ -24,7 +24,7 @@ Copy code
 
 Usage
 
-To use the library, simply create an instance of the BackgroundRemover class and call the removeBackground method, passing in the image or video frame you want to process. You will also need to pass in the context of your app and your API key.
+To use the library, simply create an instance of the BackgroundRemover class and call the removeBackground method, passing in the bitmap you want to process. 
 
 Copy code
 ```
