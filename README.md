@@ -25,10 +25,12 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
  Add the dependency on build.gradle
+ 
 
-`dependencies {
-      implementation 'com.github.shaibinc:AutoBGRemoverPerson:1.0'
-}`
+	dependencies {
+	      implementation 'com.github.shaibinc:AutoBGRemoverPerson:1.0'
+	}
+
 
 Usage
 
@@ -36,19 +38,19 @@ To use the library, simply create an instance of the BackgroundRemover class and
 
 Copy code
 ```
-new BgRemover().bitmapSegmentation(context,
-            bitmap,new BgRemoverListener() {
-            
-                @Override
-                public void onSuccess(Bitmap bitmap) {
-                    // Handle successful bitmap segmentation here
-                }
+	new BgRemover().bitmapSegmentation(context,
+		    bitmap,new BgRemoverListener() {
 
-                @Override
-                public void onFailed(Exception exception) {
-                    Toast.makeText(context, "Error Occurred", Toast.LENGTH_SHORT).show();
-                }
-            });
+			@Override
+			public void onSuccess(Bitmap bitmap) {
+			    // Handle successful bitmap segmentation here
+			}
+
+			@Override
+			public void onFailed(Exception exception) {
+			    Toast.makeText(context, "Error Occurred", Toast.LENGTH_SHORT).show();
+			}
+		    });
 ```
 
 
